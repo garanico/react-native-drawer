@@ -1,37 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator, DrawerContent } from '@react-navigation/drawer';
-import Home from "./Screens/Home";
-import About from "./Screens/About"
+import MyDrawer from "./Navigation/MyDrawer";
 
 
-// function Home() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>Home Screen</Text>
-//     </View>
-//   )
-// }
-
-// function About() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>About Screen</Text>
-//     </View>
-//   )
-// }
-
-const Drawer = createDrawerNavigator();
-
-function MyDrawer() {
-  return (
-    <Drawer.Navigator initialRouteName='Home'>
-      <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="About" component={About} />
-    </Drawer.Navigator>
-  )
-}
 export default function App() {
   return (
     <NavigationContainer>
